@@ -1,4 +1,5 @@
 using winforms_bmi.classes;
+using System.Globalization;
 
 namespace winforms_bmi;
 
@@ -6,6 +7,9 @@ static class Program
 {
     //Adding person as a field so we can access it here or in Mainform
     public static Person person = new classes.Person();
+
+    //Check the local decimal separator or else the calculations will fail due to 90,7 will be read as 907
+    private static string decimalFormat = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
@@ -22,10 +26,13 @@ static class Program
     {
         double output;
 
-        if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))
+        //Replace ',' with '.' if found 
+        if (!input.Contains(decimalFormat))
+            input = input.Replace(",", decimalFormat);
+
+        if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))// || !input.Contains(decimalFormat))
         {
             output = 0;
-            //Program.person.HeightFloat = output;
             return output;
         }
         Program.person.HeightFloat = output;
@@ -36,10 +43,12 @@ static class Program
     {
         double output;
 
-        if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))
+        if (!input.Contains(decimalFormat))
+            input = input.Replace(",", decimalFormat);
+
+        if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))// || !input.Contains(decimalFormat))
         {
             output = 0;
-            //Program.person.WeightFloat = output;
             return output;
         }
         Program.person.WeightFloat = output;

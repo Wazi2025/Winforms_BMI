@@ -12,18 +12,9 @@ public partial class Mainform : Form
 
     void btnCalculate_Click(object sender, EventArgs e)
     {
-        // if (tbHeight.Text == "" || tbWeight.Text == "")
-        // {
-        //     lblBMIOutput.Text = "Missing data";
-        //     return;
-        // }
-        // else
-
-
-        //lblBMIOutput.Text = "Invalid input. Please use decimal numbers";
         if (Program.ValidateHeightInput(tbHeight.Text) == 0 || Program.ValidateWeightInput(tbWeight.Text) == 0)
         {
-            lblBMIOutput.Text = "Invalid input. Please use decimal numbers";
+            lblBMIOutput.Text = "Invalid input. Please use integer/decimal numbers";
         }
         else
         {
