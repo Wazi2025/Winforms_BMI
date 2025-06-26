@@ -1,5 +1,3 @@
-using winforms_bmi.classes;
-
 namespace winforms_bmi;
 
 public partial class Mainform : Form
@@ -14,28 +12,38 @@ public partial class Mainform : Form
 
     void btnCalculate_Click(object sender, EventArgs e)
     {
-        double bmi = 0;
+        // if (tbHeight.Text == "" || tbWeight.Text == "")
+        // {
+        //     lblBMIOutput.Text = "Missing data";
+        //     return;
+        // }
+        // else
 
-        if (tbHeight.Text == "" || tbWeight.Text == "")
+
+        //lblBMIOutput.Text = "Invalid input. Please use decimal numbers";
+        if (Program.ValidateHeightInput(tbHeight.Text) == 0 || Program.ValidateWeightInput(tbWeight.Text) == 0)
         {
-            lblBMIOutput.Text = "Missing data";
-            return;
+            lblBMIOutput.Text = "Invalid input. Please use decimal numbers";
         }
         else
         {
-            Program.person.HeightFloat = Program.ValidateInput(tbHeight.Text);
-            Program.person.WeightFloat = Program.ValidateInput(tbWeight.Text);
+            //Calculate BMI using the BMI formula
+            //Program.person.Bmi = Program.person.WeightFloat / (Program.person.HeightFloat / 100 * Program.person.HeightFloat / 100);
+            Program.person.Bmi = Program.CalculateBMI();
+
+            //Format with 2 decimals
+            lblBMIOutput.Text = $"Your BMI is :{Program.person.Bmi.ToString("F2")}";
         }
+    }
 
+    private void tbHeight_TextChanged(object sender, EventArgs e)
+    {
+        lblBMIOutput.Text = "";
+    }
 
-        //Calculate BMI using the BMI formula
-        Program.person.Bmi = Program.person.WeightFloat / (Program.person.HeightFloat / 100 * Program.person.HeightFloat / 100);
-
-        bmi = Program.person.Bmi;
-
-        //Format with 2 decimals
-        lblBMIOutput.Text = $"Your BMI is :{Program.person.Bmi.ToString("F2")}";
-
+    private void tbWeight_TextChanged(object sender, EventArgs e)
+    {
+        lblBMIOutput.Text = "";
     }
     public void InitializeControls()
     {
@@ -44,6 +52,7 @@ public partial class Mainform : Form
         btnCalculate.Text = "Calculate BMI";
         btnCalculate.AutoSize = true;
 
+        //Hook up button clicked event
         btnCalculate.Click += new EventHandler(this.btnCalculate_Click);
 
         lblBMIOutput = new Label();
@@ -59,7 +68,14 @@ public partial class Mainform : Form
         lblWeight.AutoSize = true;
 
         tbHeight = new TextBox();
+
+        //Hook up text changed event
+        tbHeight.TextChanged += new EventHandler(this.tbHeight_TextChanged);
+
         tbWeight = new TextBox();
+
+        //Hook up text changed event
+        tbWeight.TextChanged += new EventHandler(this.tbWeight_TextChanged);
 
         tblMain = new TableLayoutPanel();
         tblMain.ColumnCount = 3;
@@ -83,6 +99,5 @@ public partial class Mainform : Form
     {
         InitializeComponent();
         InitializeControls();
-
     }
 }
