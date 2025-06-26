@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("winforms_bmi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6a00a751eb22c03f92344df052404547b74e502")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc73a5c4e42b1cedf6489bd0d2fb1f879e31a56b")]
 [assembly: System.Reflection.AssemblyProductAttribute("winforms_bmi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("winforms_bmi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
