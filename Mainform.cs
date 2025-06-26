@@ -23,7 +23,7 @@ public partial class Mainform : Form
             Program.person.Bmi = Program.CalculateBMI();
 
             //Format with 2 decimals
-            lblBMIOutput.Text = $"Your BMI is :{Program.person.Bmi.ToString("F2")}";
+            lblBMIOutput.Text = $"Your BMI is: {Program.person.Bmi.ToString("F2")}";
         }
     }
 
@@ -82,6 +82,9 @@ public partial class Mainform : Form
         tblMain.AutoSize = true;
         this.Controls.Add(tblMain);
         this.Text = "BMI Calculator";
+        this.MaximizeBox = false;
+        this.Size = new System.Drawing.Size(300, 300);
+        this.StartPosition = FormStartPosition.CenterScreen;
 
     }
 

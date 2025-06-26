@@ -10,6 +10,7 @@ static class Program
 
     //Check the local decimal separator or else the calculations will fail due to 90,7 will be read as 907
     private static string decimalFormat = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+    private static string comma = ",";
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
@@ -28,7 +29,7 @@ static class Program
 
         //Replace ',' with '.' if found 
         if (!input.Contains(decimalFormat))
-            input = input.Replace(",", decimalFormat);
+            input = input.Replace(comma, decimalFormat);
 
         if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))// || !input.Contains(decimalFormat))
         {
@@ -44,7 +45,7 @@ static class Program
         double output;
 
         if (!input.Contains(decimalFormat))
-            input = input.Replace(",", decimalFormat);
+            input = input.Replace(comma, decimalFormat);
 
         if (string.IsNullOrWhiteSpace(input) || !double.TryParse(input, out output))// || !input.Contains(decimalFormat))
         {
