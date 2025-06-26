@@ -1,0 +1,14 @@
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\bin\Debug\net9.0-windows\winforms_bmi.exe
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\bin\Debug\net9.0-windows\winforms_bmi.deps.json
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\bin\Debug\net9.0-windows\winforms_bmi.runtimeconfig.json
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\bin\Debug\net9.0-windows\winforms_bmi.dll
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\bin\Debug\net9.0-windows\winforms_bmi.pdb
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.AssemblyInfoInputs.cache
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.AssemblyInfo.cs
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.csproj.CoreCompileInputs.cache
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.dll
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\refint\winforms_bmi.dll
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.pdb
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\winforms_bmi.genruntimeconfig.cache
+C:\Users\Instruktor\Desktop\CSharp\Winforms_BMI\obj\Debug\net9.0-windows\ref\winforms_bmi.dll
